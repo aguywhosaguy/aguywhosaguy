@@ -1,4 +1,4 @@
-Hello! I'm aguywhosaguy. This description was taking from my [website](https://aguywhosaguy.com), albeit with some modifications.
+Hello! I'm aguywhosaguy. This description was taken from my [website](https://aguywhosaguy.com), albeit with some modifications.
 
 While I haven't really found my place yet, I'm interested in web development. However, frontend isn't really my strong suit, if you couldn't tell by my masterful web design.
 
