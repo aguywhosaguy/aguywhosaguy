@@ -1,9 +1,12 @@
 # Tools
 List of tools I use.
 
-## Distro
-- Debian (most of the time)
+## OS
+- Windows (home pc)
+- Debian (VMs)
+- Arch (on hardware)
 
 ## Text Editor
-- VSCode (using code tunnel)
+- VSCode (using code tunnel, in dire linux setups)
+- VSCode (on home pc)
 - Neovim (in linux terminal)
