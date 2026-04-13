@@ -23,7 +23,7 @@
 	    home-manager.useUserPackages = true;
 
 	    home-manager.users.henryw = import ./home.nix;
-	  };
+	  }
         ];
       };
     };
