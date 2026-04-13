@@ -14,7 +14,8 @@
     unzip
     p7zip
 
-
+    firefox
+    ghostty
   ];
 
   programs.zsh = {
@@ -38,6 +39,15 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    systemd.enable = false;
+  
+    settings = {
+      "$mod" = "SUPER";
+      bind = 
+      [
+        "$mod, T, exec, ghostty"
+      ];
+    };
   };
 
   programs.kitty = {

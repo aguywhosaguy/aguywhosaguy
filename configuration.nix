@@ -48,6 +48,11 @@
     variant = "";
   };
 
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.henryw = {
     isNormalUser = true;
@@ -65,6 +70,7 @@
 
   programs.hyprland = {
     enable = true;
+    withUWSM = true;
   };
 
   environment.systemPackages = with pkgs; [
