@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     
     fastfetch
+    wev
     
     zip
     xz
@@ -20,6 +21,9 @@
     ghostty
 
     vicinae
+    brightnessctl
+    bluez
+    bluez-tools
   ];
 
   programs.zsh = {
@@ -93,8 +97,15 @@
       bind = 
       [
         "$mod, T, exec, ghostty"
-	"$mod, P, exec, vicinae toggle"
         "$mod, Escape, exec, killactive"
+
+        ", XF86MonBrightnessUp, exec, brightnessctl s +10%"
+        ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+      ];
+
+      bindr =
+      [
+        "$mod, SUPER_L, exec, vicinae toggle"
       ];
 
       layerrule = [
