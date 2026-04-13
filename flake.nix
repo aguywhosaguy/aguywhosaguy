@@ -2,7 +2,7 @@
   description = "nixos root";
 
   inputs = {
-    nixpks.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpks.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";

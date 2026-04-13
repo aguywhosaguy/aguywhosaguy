@@ -35,7 +35,7 @@
     shellAliases = {
       fupdate = "git add . && sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix";
       update = "sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix";
-      cupdate = "git commit && sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix";
+      cupdate = "git commit -a && sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix";
     };
     
     oh-my-zsh = {
@@ -115,11 +115,11 @@
       ];
       
       windowrule = [
-        "match:initial_title Ghostty, opacity 0.85"
+        "match:initial_title Ghostty, opacity 0.75"
       ];
       
       monitor = [
-        "eDP-1, 1920x1080@60, 0x0, 0.90"
+        "eDP-1, 1920x1080@60, 0x0, 0.83"
       ];
     };
   };
