@@ -57,6 +57,10 @@
       layerrule = [
         "blur on, ignore_alpha 0, match:namespace vicinae"
       ];
+
+      monitor = [
+        "eDP-1, 1920x1080@60, 0x0, .5"
+      ];
     };
   };
 
