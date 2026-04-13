@@ -44,9 +44,18 @@
   
     settings = {
       "$mod" = "SUPER";
+      exec-once = [
+        "vicinae server"
+      ];
+
       bind = 
       [
         "$mod, T, exec, ghostty"
+	"$mod, P, exec, vicinae toggle"
+      ];
+
+      layerrule = [
+        "blur on, ignore_alpha 0, match:namespace vicinae"
       ];
     };
   };
