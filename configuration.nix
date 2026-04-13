@@ -62,11 +62,17 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
+  programs.hyprland = {
+    enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
     git
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     gh
     wget
+    kitty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
