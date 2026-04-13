@@ -43,15 +43,16 @@
     systemd.enable = false;
   
     settings = {
-      "$mod" = "SUPER";
       exec-once = [
         "vicinae server"
       ];
 
+      "$mod" = "SUPER";
       bind = 
       [
         "$mod, T, exec, ghostty"
 	"$mod, P, exec, vicinae toggle"
+        "$mod, esc, exec, killactive"
       ];
 
       layerrule = [
@@ -59,7 +60,7 @@
       ];
 
       monitor = [
-        "eDP-1, 1920x1080@60, 0x0, .5"
+        "eDP-1, 1920x1080@60, 0x0, 0.5"
       ];
     };
   };
