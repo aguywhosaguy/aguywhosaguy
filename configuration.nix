@@ -59,6 +59,7 @@
     description = "Me";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
@@ -72,6 +73,7 @@
     enable = true;
     withUWSM = true;
   };
+  programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
     git
@@ -80,6 +82,8 @@
     wget
     kitty
   ];
+
+  environment.shells = with pgks; [ zsh ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
