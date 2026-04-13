@@ -16,6 +16,7 @@
 
     firefox
     ghostty
+    vicinae
   ];
 
   programs.zsh = {
