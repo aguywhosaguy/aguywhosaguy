@@ -2,11 +2,11 @@
 
 {
   home.username = "henryw";
-  home.homeDiretory = "/home/ryan";
+  home.homeDirectory = "/home/henryw";
 
   home.packages = with pkgs; [
     
-    neofetch
+    fastfetch
     
     zip
     xz
@@ -20,7 +20,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestions.enable = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
     shellAliases = {

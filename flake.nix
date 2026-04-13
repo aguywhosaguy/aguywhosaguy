@@ -5,13 +5,13 @@
     nixpks.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     home-manager = {
-      url = "github:nix-comunity/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-25.11";
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-namager, ...}@inputs: {
+  outputs = { self, nixpkgs, home-manager, ...}@inputs: {
     nixosConfigurations = {
       nimonix = nixpkgs.lib.nixosSystem {
         modules = [ 
