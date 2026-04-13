@@ -14,7 +14,7 @@
     unzip
     p7zip
 
-    chrome
+    google-chrome
     firefox
 
     ghostty
@@ -55,7 +55,7 @@
       [
         "$mod, T, exec, ghostty"
 	"$mod, P, exec, vicinae toggle"
-        "$mod, esc, exec, killactive"
+        "$mod, Escape, exec, killactive"
       ];
 
       layerrule = [
@@ -63,7 +63,7 @@
       ];
 
       monitor = [
-        "eDP-1, 1920x1080@60, 0x0, 0.85"
+        "eDP-1, 1920x1080@60, 0x0, 0.9"
       ];
     };
   };
