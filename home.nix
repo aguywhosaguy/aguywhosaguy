@@ -84,6 +84,7 @@
     settings = {
       exec-once = [
         "vicinae server"
+	"hyprpanel"
       ];
 
       "$mod" = "SUPER";
