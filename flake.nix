@@ -9,18 +9,25 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ...}@inputs: {
     nixosConfigurations = {
       nimonix = nixpkgs.lib.nixosSystem {
-        modules = [ 
+        specialArgs = { inherit inputs; };
+	modules = [ 
           ./configuration.nix
 
 	  home-manager.nixosModules.home-manager
 	  {
             home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
 
 	    home-manager.users.henryw = import ./home.nix;
 	  }
