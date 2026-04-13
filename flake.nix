@@ -1,7 +1,7 @@
 {
   description = "nixos root";
 
-  input = {
+  inputs = {
     nixpks.url = "github:NixOS/nixpkgs/nixos-25.11";
   };
 
