@@ -85,7 +85,7 @@
 
   fonts.packages = with pkgs; [
     open-sans
-    nerd-fonts.noto-nerd-font
+    nerd-fonts.noto
   ];
 
   environment.shells = with pkgs; [ zsh ];
