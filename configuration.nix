@@ -83,6 +83,10 @@
     kitty
   ];
 
+  fonts.packages = with pkgs; [
+    open-sans
+  ];
+
   environment.shells = with pkgs; [ zsh ];
 
   # Some programs need SUID wrappers, can be configured further or are
