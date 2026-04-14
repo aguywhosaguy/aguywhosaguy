@@ -92,6 +92,16 @@
     kitty
   ];
 
+  environment.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = "1";
+
+    QT_QPA_PLATFORM = "wayland";
+
+    GDK_BACKEND = "wayland,x11";
+
+    NIXOS_OZONE_WL = "1";
+  };
+
   fonts.packages = with pkgs; [
     open-sans
     nerd-fonts.noto
