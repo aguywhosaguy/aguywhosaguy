@@ -149,7 +149,11 @@
       # this may also be a string or a path to a JSON file.
   };
 
-
+  home.file.".cache/noctalia/wallpapers.json" = {
+    text = builtins.toJSON {
+      defaultWallpaper = "~/projects/aguywhosaguy/assets/wallpapers/rusty1.jpg";
+    };
+  };
 
   programs.kitty = {
     enable = true;

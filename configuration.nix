@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.silentSDDM.nixosModules.default
     ];
 
   # Bootloader.
@@ -76,6 +77,11 @@
     enable = true;
     withUWSM = true;
   };
+
+  programs.silentSDDM = {
+    enable = true;
+  };
+
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
