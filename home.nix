@@ -32,6 +32,17 @@
     bluez-tools
   ];
 
+  programs.git = {
+    enable = true;
+
+    settings = {
+      user = {
+        name = "aguywhosaguy";
+	email = "caseypeg8@gmail.com";
+      };
+    };
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
