@@ -20,23 +20,34 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ...}@inputs: {
+  outputs = { 
+    self, 
+    nixpkgs, 
+    home-manager, 
+    ...
+  }@inputs: {
     nixosConfigurations = {
-      nimonix = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-	modules = [ 
-          ./configuration.nix
+      nimonix = let
+        username = "henryw";
+	specialArgs = { inherit username inputs; };
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs; 
+          system = "x86_64-linux";
 
-	  home-manager.nixosModules.home-manager
-	  {
-            home-manager.useGlobalPkgs = true;
-	    home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; };
+	  modules = [ 
+            ./hosts/nimonix
+            ./users/${username}/nixos.nix
+	    home-manager.nixosModules.home-manager
+	    {
+              home-manager.useGlobalPkgs = true;
+	      home-manager.useUserPackages = true;
 
-	    home-manager.users.henryw = import ./home.nix;
-	  }
-        ];
-      };
+              home-manager.extraSpecialArgs = specialArgs; 
+	      home-manager.users.${username} = import ./users/${username}/home.nix;
+	    }
+          ];
+        };
     };
   };
 }
