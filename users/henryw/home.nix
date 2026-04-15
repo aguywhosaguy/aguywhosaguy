@@ -6,6 +6,7 @@
     inputs.noctalia.homeModules.default
     ./shell
     ./desktop
+    ./nvim
   ];
 
   home.username = "henryw";
@@ -25,6 +26,8 @@
 
     google-chrome
     firefox
+    
+    davinci-resolve
 
     ghostty
     vicinae

@@ -2,7 +2,7 @@
   description = "nixos root";
 
   inputs = {
-    nixpks.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -18,12 +18,18 @@
       url = "github:uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { 
     self, 
     nixpkgs, 
     home-manager, 
+    nvf,
     ...
   }@inputs: {
     nixosConfigurations = {
@@ -38,6 +44,7 @@
 	  modules = [ 
             ./hosts/nimonix
             ./users/${username}/nixos.nix
+
 	    home-manager.nixosModules.home-manager
 	    {
               home-manager.useGlobalPkgs = true;
