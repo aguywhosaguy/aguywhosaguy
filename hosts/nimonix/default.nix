@@ -9,7 +9,16 @@
 
   networking.hostName = "nimonix";
 
-  hardware.bluetooth.enable = true;
+  boot.initrd.kernelModules = [ "amdgpu" ];
+
+  hardware = {
+    bluetooth.enable = true;
+
+    graphics.enable = true;
+    
+    amdgpu.opencl.enable = true;
+
+  };
 
   services.upower.enable = true;
 }

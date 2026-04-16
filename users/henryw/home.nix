@@ -27,7 +27,9 @@
     google-chrome
     firefox
     
-    davinci-resolve
+    (writeShellScriptBin "davinci-resolve" ''
+      QT_QPA_PLATFORM=xcb exec ${pkgs.davinci-resolve}/bin/davinci-resolve "$@" 
+    '')
 
     ghostty
     vicinae
