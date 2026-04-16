@@ -54,8 +54,17 @@
           monthBeforeDay = true;
           name = "St. Louis, Missouri";
         };
+
+
+      wallpaper = {
+        directory = "/home/henryw/wallpapers";
+        enabled = true;
+        fillMode = "crop";
+        randomEnabled = true;
+        randomIntervalSec = 300;
+        transitionDuration = 1500;
       };
-      # this may also be a string or a path to a JSON file.
+    };
   };
 
   home.file.".cache/noctalia/wallpapers.json" = {
