@@ -9,8 +9,11 @@
     settings = {
       vim = {
         lineNumberMode = "relNumber";
-        lsp.enable = true;
-
+        lsp = {
+          enable = true;
+          presets.tailwindcss-language-server.enable = true;
+        };
+        
         statusline.lualine = {
           enable = true;
           theme = "horizon";
@@ -40,16 +43,27 @@
 
         languages = {
           enableTreesitter = true;
+          enableFormat = true;
 
           nix.enable = true;
           ts.enable = true;
-          jsx.enable = true;
+          html.enable = true;
+          json.enable = true;
+
+          
         };
 
         options = {
           tabstop = 2;
           shiftwidth = 2;
           smarttab = true;
+        };
+
+        ui = {
+          colorful-menu-nvim.enable = true;
+          noice.enable = true;
+          modes.enable = true;
+          ufo.enable = true;
         };
       };
     };
