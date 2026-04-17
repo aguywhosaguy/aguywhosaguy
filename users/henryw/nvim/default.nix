@@ -21,10 +21,13 @@
         };
 
         mini = {
-          animate.enable = true;
           icons.enable = true;
           pairs.enable = true;
           starter.enable = true;
+        };
+
+        autocomplete.nvim-cmp = {
+          enable = true;
         };
 
         treesitter = {

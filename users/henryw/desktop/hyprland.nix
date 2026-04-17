@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = false;
-  
+
     settings = {
       exec-once = [
         "vicinae server"
@@ -17,9 +17,19 @@
         "$mod, T, exec, ghostty"
         "$mod, Escape, exec, forcekillactive"
 
+        "$mod, [0-9], workspace, [1-10]"
+
         ", XF86MonBrightnessUp, exec, brightnessctl s +10%"
         ", XF86MonBrightnessDown, exec, brightnessctl s 10%-"
-      ];
+      ] ++ (
+          builtins.concatLists (builtins.genList (i:
+            let ws = i + 1;
+            in [
+              "$mod, ${toString (if ws == 10 then 0 else ws)}, workspace, ${toString ws}"
+              "$mod SHIFT, ${toString (if ws == 10 then 0 else ws)}, movetoworkspace, ${toString ws}"
+            ]
+          ) 10)
+        );
 
       bindr =
       [
@@ -39,4 +49,5 @@
       ];
     };
   };
+
 }

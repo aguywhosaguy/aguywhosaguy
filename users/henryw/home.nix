@@ -24,6 +24,8 @@
     unzip
     p7zip
 
+    bun
+
     google-chrome
     firefox
     
