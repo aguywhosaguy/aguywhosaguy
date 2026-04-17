@@ -11,6 +11,8 @@
     wayland.enable = true;
   };
 
+  networking.firewall.allowedTCPPorts = [ 5173 ];
+
   hardware.bluetooth.enable = true;
 
   services.upower.enable = true;

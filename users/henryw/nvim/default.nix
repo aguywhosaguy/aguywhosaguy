@@ -42,6 +42,8 @@
           enableTreesitter = true;
 
           nix.enable = true;
+          ts.enable = true;
+          jsx.enable = true;
         };
 
         options = {
