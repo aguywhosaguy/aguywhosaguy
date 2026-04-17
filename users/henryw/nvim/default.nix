@@ -61,7 +61,7 @@
           colorful-menu-nvim.enable = true;
           noice.enable = true;
           modes-nvim.enable = true;
-          nvim-ufo.enable = true;
+          #nvim-ufo.enable = true;
         };
 
         theme = {
