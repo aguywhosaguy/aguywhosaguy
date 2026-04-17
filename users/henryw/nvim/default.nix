@@ -11,7 +11,6 @@
         lineNumberMode = "relNumber";
         lsp = {
           enable = true;
-          presets.tailwindcss-language-server.enable = true;
         };
         
         statusline.lualine = {
@@ -48,9 +47,8 @@
           nix.enable = true;
           ts.enable = true;
           html.enable = true;
+          css.enable = true;
           json.enable = true;
-
-          
         };
 
         options = {
@@ -62,8 +60,13 @@
         ui = {
           colorful-menu-nvim.enable = true;
           noice.enable = true;
-          modes.enable = true;
-          ufo.enable = true;
+          modes-nvim.enable = true;
+          nvim-ufo.enable = true;
+        };
+
+        theme = {
+          enable = true;
+          name = "mellow";
         };
       };
     };
