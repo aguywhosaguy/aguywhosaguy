@@ -9,6 +9,7 @@
     settings = {
       vim = {
         lineNumberMode = "relNumber";
+
         lsp = {
           enable = true;
         };
@@ -28,7 +29,7 @@
           starter.enable = true;
         };
 
-        autocomplete.nvim-cmp = {
+        autocomplete.blink-cmp = {
           enable = true;
         };
 
@@ -49,6 +50,7 @@
           html.enable = true;
           css.enable = true;
           json.enable = true;
+          tailwind.enable = true;
         };
 
         options = {

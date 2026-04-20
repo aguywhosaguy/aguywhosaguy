@@ -42,5 +42,25 @@
     bluez-tools
   ];
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    name = "Nordzy-hyprcursors";
+    size = 24;
+
+    package = pkgs.nordzy-cursor-theme;
+
+    hyprcursor = {
+      enable = true;
+      size = 24;
+    };
+  };
+
+  #  home.file.".icons/Nordzy-hyprcursors" = {
+  # source = pkgs.fetchzip {
+  #   url = "https://github.com/guillaumeboehm/Nordzy-cursors/releases/download/v2.4.0/Nordzy-hyprcursors.tar.gz";
+  #   hash = "sha256-4RCcwjjEVkkzXNxxy6rooiCfKCNrZ4gig7xQwwlJGWc=";
+  # };
+  # };
+
   home.stateVersion = "25.11";
 }

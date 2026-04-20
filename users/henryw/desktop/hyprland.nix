@@ -36,6 +36,13 @@
         "$mod, SUPER_L, exec, vicinae toggle"
       ];
 
+      env = [
+        "HYPRCURSOR_THEME,Nordzy-hyprcursors"
+        "HYPRCURSOR_SIZE,24"
+        "XCURSOR_THEME,Nordzy-cursors"
+        "XCURSOR_SIZE,24"
+      ];
+
       layerrule = [
         "blur on, ignore_alpha 0, match:namespace vicinae"
       ];
