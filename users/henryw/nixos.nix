@@ -34,13 +34,7 @@
 
   programs.silentSDDM = {
     enable = true;
-    theme = "rei";
-
-    settings = {
-      LoginScreen = {
-        background = "/home/henryw/wallpapers/rusty.mp4";
-      };
-    };
+    theme = "default";
   };
 
   programs.zsh = {
