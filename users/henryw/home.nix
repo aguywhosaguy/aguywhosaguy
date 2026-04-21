@@ -29,6 +29,8 @@
     google-chrome
     firefox
     spotify
+
+    cheese
     
     (writeShellScriptBin "davinci-resolve" ''
       QT_QPA_PLATFORM=xcb exec ${pkgs.davinci-resolve}/bin/davinci-resolve "$@" 
