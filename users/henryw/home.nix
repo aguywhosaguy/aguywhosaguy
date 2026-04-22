@@ -31,6 +31,9 @@
     spotify
 
     cheese
+    nemo-with-extensions
+    imv
+
     
     (writeShellScriptBin "davinci-resolve" ''
       QT_QPA_PLATFORM=xcb exec ${pkgs.davinci-resolve}/bin/davinci-resolve "$@" 
@@ -43,7 +46,22 @@
     brightnessctl
     bluez
     bluez-tools
+    pulseaudio
   ];
+
+  gtk = {
+    enable = true;
+
+    theme = {
+      name = "Nordic";
+      package = pkgs.nordic;
+    };
+
+    iconTheme = {
+      name = "Nordzy-dark";
+      package = pkgs.nordzy-icon-theme;
+    };
+  };
 
   home.pointerCursor = {
     gtk.enable = true;
