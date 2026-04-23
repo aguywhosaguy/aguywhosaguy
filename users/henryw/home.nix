@@ -33,6 +33,7 @@
     cheese
     nemo-with-extensions
     imv
+    steam
 
     
     (writeShellScriptBin "davinci-resolve" ''
