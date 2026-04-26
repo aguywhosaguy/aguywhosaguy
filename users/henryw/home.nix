@@ -25,6 +25,7 @@
     p7zip
 
     bun
+    pnpm
 
     google-chrome
     firefox
@@ -34,6 +35,7 @@
     nemo-with-extensions
     imv
     steam
+    grim
 
     
     (writeShellScriptBin "davinci-resolve" ''

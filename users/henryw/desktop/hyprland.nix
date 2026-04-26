@@ -16,6 +16,7 @@
       [
         "$mod, T, exec, ghostty"
         "$mod, Escape, exec, forcekillactive"
+        "SHIFT, f1, exec, flameshot gui"
 
         "$mod, [0-9], workspace, [1-10]"
 
