@@ -29,7 +29,9 @@
 
     google-chrome
     firefox
+
     spotify
+    vesktop
 
     cheese
     nemo-with-extensions
