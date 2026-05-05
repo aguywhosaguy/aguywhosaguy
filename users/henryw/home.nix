@@ -52,6 +52,7 @@
     bluez
     bluez-tools
     pulseaudio
+    wineWow64Packages.stable
   ];
 
   gtk = {
