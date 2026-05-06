@@ -17,6 +17,8 @@
 
   services.upower.enable = true;
 
+  services.flatpak.enable = true;
+
   users.users.henryw = {
     isNormalUser = true;
     description = "Henry";
