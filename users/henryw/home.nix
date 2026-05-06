@@ -37,7 +37,8 @@
 
     cheese
     nemo-with-extensions
-    imv
+    gwenview
+    vlc
     steam
     grim
 
