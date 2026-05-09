@@ -27,14 +27,14 @@
     bun
     pnpm
 
-    #    (inputs.fenix.packages.${pkgs.system}.stable.withComponents [
-    #  "cargo"
-    #  "rustc"
-    #  "rust-src"
-    #  "rustfmt"
-    #  "clippy"
-    #])
-    #inputs.fenix.packages.${pkgs.system}.stable.rust-analyzer
+    (inputs.fenix.packages.${pkgs.system}.stable.withComponents [
+      "cargo"
+      "rustc"
+      "rust-src"
+      "rustfmt"
+      "clippy"
+    ])
+    inputs.fenix.packages.${pkgs.system}.stable.rust-analyzer
 
 
     # desktop programs
