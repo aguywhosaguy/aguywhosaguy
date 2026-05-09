@@ -37,7 +37,7 @@
 
     cheese
     nemo-with-extensions
-    gwenview
+    kdePackages.gwenview
     vlc
     steam
     grim
@@ -47,6 +47,16 @@
       QT_QPA_PLATFORM=xcb exec ${pkgs.davinci-resolve}/bin/davinci-resolve "$@" 
     '')
 
+    (pkgs.wrapOBS {
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-backgroundremoval
+        obs-pipewire-audio-capture
+        obs-vaapi #optional AMD hardware acceleration
+        obs-gstreamer
+        obs-vkcapture
+      ];
+    })
     ghostty
     vicinae
     quickshell
