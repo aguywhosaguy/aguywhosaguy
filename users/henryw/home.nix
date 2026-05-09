@@ -7,8 +7,7 @@
     ./shell
     ./desktop
     ./nvim
-
-    ./flatpak.nix
+    ./misc
   ];
 
   home.username = "henryw";
