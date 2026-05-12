@@ -36,6 +36,9 @@
     ])
     inputs.fenix.packages.${pkgs.system}.stable.rust-analyzer
 
+    gcc
+    binutils
+    gnumake
 
     # desktop programs
     google-chrome

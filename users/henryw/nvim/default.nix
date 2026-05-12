@@ -47,6 +47,7 @@
 
           nix.enable = true;
           ts.enable = true;
+          rust.enable = true;
           html.enable = true;
           css.enable = true;
           json.enable = true;
