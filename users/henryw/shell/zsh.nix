@@ -7,6 +7,10 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    initExtra = ''
+     export PATH="$HOME/.cargo/bin:$PATH"
+    '';
+
     shellAliases = {
       fupdate = "git add . && sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix";
       update = "sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix";
