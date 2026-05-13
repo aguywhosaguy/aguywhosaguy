@@ -51,6 +51,7 @@
           html.enable = true;
           css.enable = true;
           json.enable = true;
+          clang.enable = true;
           tailwind.enable = true;
         };
 

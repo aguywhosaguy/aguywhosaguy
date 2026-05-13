@@ -15,6 +15,8 @@
 
   hardware.bluetooth.enable = true;
 
+  services.logind.powerKey = "ignore";
+
   services.upower.enable = true;
 
   services.flatpak.enable = true;
