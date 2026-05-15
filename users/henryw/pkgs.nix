@@ -6,7 +6,7 @@
   ];
 
   home.packages = with pkgs; [
-    
+
     # etc CLI tools
     fastfetch
     wev
@@ -14,7 +14,8 @@
 
     # core CLI tools
     eza # ls alternative
-    
+    helix
+
 
     # compression CLI tools
     zip
@@ -47,15 +48,19 @@
     spotify
     vesktop # discord client
 
+    zed-editor
+
     cheese # camera
     kdePackages.gwenview # photo viewer
     vlc # video viewer
     nemo-with-extensions # file explorer
 
     steam
-    
+
+    anki
+
     (writeShellScriptBin "davinci-resolve" ''
-      QT_QPA_PLATFORM=xcb exec ${pkgs.davinci-resolve}/bin/davinci-resolve "$@" 
+      QT_QPA_PLATFORM=xcb exec ${pkgs.davinci-resolve}/bin/davinci-resolve "$@"
     '')
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
@@ -75,7 +80,7 @@
     vicinae # launcher
     quickshell # dependency for noctalia
 
-    
+
     # core
     brightnessctl
     bluez
