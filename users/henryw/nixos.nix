@@ -24,7 +24,7 @@
   users.users.henryw = {
     isNormalUser = true;
     description = "Henry";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "kvm" ];
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };
@@ -35,6 +35,8 @@
     enable = true;
     withUWSM = true;
   };
+
+  programs.gpu-screen-recorder.enable = true;
 
   programs.silentSDDM = {
     enable = true;
