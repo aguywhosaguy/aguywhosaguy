@@ -7,6 +7,7 @@
 
     settings = {
       exec-once = [
+        "ambxst"
         "vicinae server"
       ];
 
@@ -14,9 +15,17 @@
       bind = 
       [
         "$mod, T, exec, ghostty"
-        "$mod, Escape, exec, forcekillactive"
         "SHIFT, f1, exec, flameshot gui"
 
+        "$mod, up, resizeactive, 0 -50"
+        "$mod, down, resizeactive, 0 50"
+        "$mod, left, resizeactive, -50 0"
+        "$mod, right, resizeactive, 50 0"
+
+        "super shift, F23, layoutmsg, togglesplit"
+
+        "$mod, Num_Lock, killactive"
+        "ALT, F4, killactive"
         "$mod, [0-9], workspace, [1-10]"
 
         ", XF86MonBrightnessUp, exec, brightnessctl s +10%"
@@ -57,6 +66,14 @@
       monitor = [
         "eDP-1, 1920x1080@60, 0x0, 1"
       ];
+
+      general = {
+        resize_on_border = true;
+      };
+
+      dwindle = {
+        preserve_split = true;
+      };
 
       extraConfig = ''
         source = ~/.local/share/ambxst/hyprland.conf
