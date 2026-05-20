@@ -44,6 +44,7 @@
     # desktop programs
     google-chrome
     firefox
+    inputs.helium.packages.${system}.default
 
     spotify
     vesktop # discord client
@@ -56,7 +57,10 @@
     nemo-with-extensions # file explorer
 
     steam
+    heroic
 
+    overskride # bluetooth
+    
     anki
 
     (writeShellScriptBin "davinci-resolve" ''
