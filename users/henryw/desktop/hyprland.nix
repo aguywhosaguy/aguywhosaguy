@@ -15,6 +15,8 @@
       bind = 
       [
         "$mod, T, exec, ghostty"
+        "$mod, C, exec, google-chrome"
+        "$mod, H, exec, helium"
         "SHIFT, f1, exec, flameshot gui"
 
         "$mod, up, resizeactive, 0 -50"
