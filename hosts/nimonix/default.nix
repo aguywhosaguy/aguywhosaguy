@@ -28,4 +28,14 @@
     enable = true;
     pulse.enable = true;
   };
+
+  services.libinput = {
+    enable = true;
+    touchpad = {
+      disableWhileTyping = false;
+    };
+    mouse = {
+      disableWhileTyping = false;
+    };
+  };
 }

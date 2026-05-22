@@ -15,6 +15,7 @@
     # core CLI tools
     eza # ls alternative
     helix
+    openssh
 
 
     # compression CLI tools
