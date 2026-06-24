@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ../../modules/system.nix
       inputs.silentSDDM.nixosModules.default
+      ../../modules/cage.nix
     ];
 
   users.users.henryw = {
@@ -61,6 +62,12 @@
 
   services.flatpak.enable = true;
 
+  services.cageKiosk = {
+    enable = true;
+    tty = 3;
+    command = "/home/cage/bin/dashboard";
+  };
+  
 
   programs.hyprland = {
     enable = true;
