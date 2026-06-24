@@ -80,6 +80,10 @@
       extraConfig = ''
         source = ~/.local/share/ambxst/hyprland.conf
       '';
+
+      input = {
+        touchpad.disable_while_typing = false;
+      };
     };
   };
 

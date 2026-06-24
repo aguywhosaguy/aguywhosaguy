@@ -16,6 +16,8 @@
     eza # ls alternative
     helix
     openssh
+    file
+    steam-run
 
 
     # compression CLI tools
@@ -41,6 +43,10 @@
     gcc
     binutils
     gnumake
+
+    python3
+
+    ghidra-bin
 
     # desktop programs
     google-chrome
