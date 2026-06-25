@@ -61,13 +61,7 @@
   services.logind.powerKey = "ignore";
 
   services.flatpak.enable = true;
-
-  services.cageKiosk = {
-    enable = true;
-    tty = 3;
-    command = "/home/cage/bin/dashboard";
-  };
-  
+ 
 
   programs.hyprland = {
     enable = true;

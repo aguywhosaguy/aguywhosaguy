@@ -66,6 +66,10 @@
         hostname = "nimonix";
         users = [ "henryw" ];
       };
+      deli = mkSystem {
+	hostname = "deli";
+	users = [ "nick" ];
+      };
     };
   };
 }
