@@ -56,11 +56,19 @@
     wayland.enable = true;
   };
 
+  services.cageKiosk = {
+    enable = false;
+    tty = 3;
+    command = "/home/cage/bin/dashboard";
+  };
+
+  services.seatd.enable = true;
+
   services.upower.enable = true;
 
   services.logind.powerKey = "ignore";
 
-  services.flatpak.enable = true;
+  services.flatpak.enable = true; 
  
 
   programs.hyprland = {

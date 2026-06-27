@@ -27,6 +27,7 @@ in {
       home = "/home/cage";
       createHome = true;
       linger = true;
+      extraGroups = [ "video" "input" "seat" ];
     };
 
     users.groups.cage = {};
@@ -52,7 +53,7 @@ in {
         UtmpMode = "user";
         Restart = "always";
         RestartSec = "1s";
-        ExecStart = "${pkgs.cage}/bin/cage -d -s 1 -r 800x600 -- ${cfg.command}";
+        ExecStart = "${pkgs.cage}/bin/cage -d -- ${cfg.command}";
       };
     };
 
