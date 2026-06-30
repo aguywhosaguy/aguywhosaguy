@@ -6,7 +6,6 @@
       ./hardware-configuration.nix
       ../../modules/system.nix
       inputs.silentSDDM.nixosModules.default
-      ../../modules/cage.nix
     ];
 
   users.users.henryw = {
@@ -56,13 +55,14 @@
     wayland.enable = true;
   };
 
+  services.seatd.enable = true;
+
   services.upower.enable = true;
 
   services.logind.powerKey = "ignore";
 
-  services.flatpak.enable = true;
+  services.flatpak.enable = true; 
  
-
   programs.hyprland = {
     enable = true;
     withUWSM = true;

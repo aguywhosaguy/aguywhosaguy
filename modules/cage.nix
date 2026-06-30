@@ -27,18 +27,31 @@ in {
       home = "/home/cage";
       createHome = true;
       linger = true;
+      extraGroups = [ "video" "input" "seat" "render" ];
     };
 
     users.groups.cage = {};
 
     systemd.services."cage-tty${toString cfg.tty}" = {
       description = "Cage kiosk compositor on tty${toString cfg.tty}";
-      after = [ "systemd-user-sessions.service" "plymouth-quit-wait.service" ];
+      after = [ 
+        "systemd-user-sessions.service" 
+        "plymouth-quit-wait.service" 
+        "sddm.service"
+      ];
       wantedBy = [ "graphical.target" ];
       conflicts = [ "getty@tty${toString cfg.tty}.service" ];
       serviceConfig = {
         User = "cage";
-        Environment = "XDG_RUNTIME_DIR=/run/user/1001";
+        Environment = [
+          "XDG_RUNTIME_DIR=/run/user/1001"
+          "XDG_DATA_DIRS=/run/current-system/sw/share:/nix/var/nix/profiles/default/share"
+          "XDG_SESSION_TYPE=wayland"
+          "XDG_CURRENT_DESKTOP=cage"
+          "FONTCONFIG_PATH=/etc/fonts"
+          "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus"
+          "GDK_PIXBUF_MODULE_FILE=${pkgs.librsvg}/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+        ];
         PAMName = "cage-tty${toString cfg.tty}";
         RuntimeDirectory = "cage";
         TTYPath = "/dev/tty${toString cfg.tty}";
@@ -50,9 +63,7 @@ in {
         StandardError = "journal";
         UtmpIdentifier = "tty${toString cfg.tty}";
         UtmpMode = "user";
-        Restart = "always";
-        RestartSec = "1s";
-        ExecStart = "${pkgs.cage}/bin/cage -d -s 1 -r 800x600 -- ${cfg.command}";
+        ExecStart = "${pkgs.cage}/bin/cage -d -- ${cfg.command}";
       };
     };
 
