@@ -20,7 +20,16 @@
     description = "Nicholas Wheeler";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
+
+  programs.zsh = {
+    enable = true;
+  };
+
+  services.desktopManager.plasma6.enable = true;
+
+  services.displayManager.plasma-login-manager.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 }

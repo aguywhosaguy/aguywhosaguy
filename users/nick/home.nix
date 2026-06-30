@@ -3,6 +3,8 @@
 {
 
   imports = [
+	./shell
+	./pkgs.nix
   ];
 
   home.username = "nick";
