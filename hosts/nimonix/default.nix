@@ -6,7 +6,6 @@
       ./hardware-configuration.nix
       ../../modules/system.nix
       inputs.silentSDDM.nixosModules.default
-      ../../modules/cage.nix
     ];
 
   users.users.henryw = {
@@ -56,12 +55,6 @@
     wayland.enable = true;
   };
 
-  services.cageKiosk = {
-    enable = false;
-    tty = 3;
-    command = "/home/cage/bin/dashboard";
-  };
-
   services.seatd.enable = true;
 
   services.upower.enable = true;
@@ -70,7 +63,6 @@
 
   services.flatpak.enable = true; 
  
-
   programs.hyprland = {
     enable = true;
     withUWSM = true;
