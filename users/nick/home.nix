@@ -4,6 +4,7 @@
 
   imports = [
 	./shell
+	./desktop
 	./pkgs.nix
   ];
 

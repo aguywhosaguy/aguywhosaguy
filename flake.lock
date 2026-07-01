@@ -246,7 +246,8 @@
         "nixpkgs": "nixpkgs",
         "noctalia": "noctalia",
         "nvf": "nvf",
-        "silentSDDM": "silentSDDM"
+        "silentSDDM": "silentSDDM",
+        "zen-browser": "zen-browser"
       }
     },
     "rust-analyzer-src": {
@@ -368,6 +369,26 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782624757,
+        "narHash": "sha256-pqFaCAV+g8H+p0kE4vYn9ZgcEFvt644zGy7SyCdf9c8=",
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
+        "rev": "907465791e7064d86d37964dd95e23280dfb68da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }
