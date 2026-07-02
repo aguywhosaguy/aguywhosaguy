@@ -19,7 +19,7 @@
     themePackages = [ pkgs.kdePackages.breeze-plymouth ];
   };
 
-  boot.kernelParams = [ "quiet" "splash" ];
+  boot.kernelParams = [ "quiet" "splash" "systemd.tmp2_autostart=0" ];
 
   boot.blacklistedKernelModules = [ "tpm_tis" "tpm_crb" "tpm" ];
   
@@ -55,6 +55,11 @@
   };
 
   services.openssh.enable = true;
+  
+  services.udev.extraRules = ''
+    SUBSYSTEM=="tpm", ENV{SYSTEMD_READY}="0"
+    SUBSYSTEM=="tpmrm", ENV{SYSTEMD_READY}="0"
+  '';
 
   systemd.suppressedSystemUnits = [
     "dev-tpm0.device"
@@ -64,6 +69,10 @@
   systemd.units."dev-tpm0.device".enable = false;
 
   systemd.units."dev-tpmrm0.device".enable = false;
-
+  
+  systemd.settings.Manager = {
+    DefaultDeviceTimeoutSec = 5;
+  };
+  
   nixpkgs.config.allowUnfree = true;
 }
