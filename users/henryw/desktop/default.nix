@@ -3,8 +3,11 @@
 {
   imports = [
     ./hyprland.nix
+    ./niri.nix
+    ./dms.nix
     ./flameshot.nix
     ./noctalia.nix
+    ./kdeconnect.nix
   ];
 
   gtk = {

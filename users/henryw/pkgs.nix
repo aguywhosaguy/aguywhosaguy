@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, lib, ... }:
 
 {
   imports = [
@@ -10,6 +10,8 @@
     # etc CLI tools
     fastfetch
     wev
+
+    xwayland-satellite
 
 
     # core CLI tools
@@ -89,7 +91,7 @@
 
     # desktop
     vicinae # launcher
-    quickshell # dependency for noctalia
+    # quickshell # dependency for noctalia
 
 
     # core

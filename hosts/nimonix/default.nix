@@ -18,6 +18,10 @@
 
   networking.firewall.allowedTCPPorts = [ 5173 ];
 
+  networking.firewall.allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
+
+  networking.firewall.allowedUDPPortRanges = [ { from = 1714; to = 1764; } ];
+
   nixpkgs.config.allowUnfree = true;
 
   networking.hostName = "nimonix";
@@ -50,6 +54,18 @@
     };
   };
 
+  services.keyd = {
+    enable = true;
+    keyboards.default = {
+      ids = [ "*" ];
+      settings = {
+        main = {
+          leftmeta = "overload(meta, f13)";
+        };
+      };
+    };
+};
+
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
@@ -67,6 +83,8 @@
     enable = true;
     withUWSM = true;
   };
+
+  programs.niri.enable = true;
 
   programs.gpu-screen-recorder.enable = true;
 
@@ -95,4 +113,10 @@
     open-sans
     nerd-fonts.noto
   ];
+
+  nix.settings = {
+    # This appends to the default cache instead of wiping it out
+    extra-substituters = [ "https://niri.cachix.org" ];
+    extra-trusted-public-keys = [ "niri.cachix.org-1:Wv0Om60eV7UR0NTgVVe6S27866vCoZ5NInFf96gAtAM=" ];
+  };
 }

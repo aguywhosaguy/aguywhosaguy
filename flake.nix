@@ -1,5 +1,11 @@
 {
   description = "nixos root";
+
+  nixConfig = {
+    extra-substituters = [ "https://niri.cachix.org" ];
+    extra-trusted-public-keys = [ "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964=" ]; 
+  };
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
@@ -34,12 +40,20 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+    };   
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      # inputs.nixpkgs.follows = "niri/nixpkgs";
+    };
   };
   outputs = {
     self,
     nixpkgs,
     home-manager,
     nvf,
+    niri,
     ...
   }@inputs:
   let
@@ -54,6 +68,7 @@
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
+              home-manager.backupFileExtension = ".bak";
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = specialArgs;
               home-manager.users = builtins.listToAttrs (map (u: {

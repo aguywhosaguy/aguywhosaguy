@@ -12,9 +12,9 @@
     '';
 
     shellAliases = {
-      fupdate = "git add . && sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix";
-      update = "sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix";
-      cupdate = "git commit -a && sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix";
+      fupdate = "git add . && sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix --accept-flake-config";
+      update = "sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix --accept-flake-config";
+      cupdate = "git commit -a && sudo nixos-rebuild switch --flake ~/projects/aguywhosaguy#nimonix --accept-flake-config";
       tree = "eza --tree --group-directories-first";
     };
     
