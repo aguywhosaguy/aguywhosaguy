@@ -54,7 +54,6 @@
     firefox
     inputs.helium.packages.${system}.default
 
-    spotify
     vesktop # discord client
 
     zed-editor

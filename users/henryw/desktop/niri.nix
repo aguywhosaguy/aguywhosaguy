@@ -23,6 +23,7 @@
       input = {
         touchpad = {
           dwt = false;
+          natural-scroll = false;
         };
       };
 
@@ -92,6 +93,44 @@
         "Mod+Shift+8".action.move-column-to-workspace = [ 8 ];
         "Mod+Shift+9".action.move-column-to-workspace = [ 9 ];
         "Mod+Shift+0".action.move-column-to-workspace = [ 10 ];
+
+        "Mod+F8".action.spawn = [
+          "kitty"
+          "-d"
+          "/home/henryw/projects/aguywhosaguy"
+        ];
+        
+        "Mod+F9".action.spawn = [
+          "kitty"
+          "zsh"
+          "-i"
+          "-c"
+          "update; read '?Press enter to continue...'"
+        ];
+
+        "Mod+F10".action.spawn = [
+          "kitty"
+          "zsh"
+          "-i"
+          "-c"
+          "fupdate; read '?Press enter to continue...'"
+        ];
+
+        "Mod+F11".action.spawn = [
+          "kitty"
+          "zsh"
+          "-i"
+          "-c"
+          "cupdate; read '?Press enter to continue...'"
+        ];
+        
+        "Mod+F12".action.spawn = [
+          "kitty"
+          "zsh"
+          "-i"
+          "-c"
+          "p && h"
+        ];
 
         # ── Mod+Q close-window ──
         "Mod+Q" = { repeat = false; action.close-window = [ ]; };

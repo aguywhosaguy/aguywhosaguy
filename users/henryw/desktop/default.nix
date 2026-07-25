@@ -6,6 +6,7 @@
     ./niri.nix
     ./dms.nix
     ./flameshot.nix
+    ./spicetify.nix
     ./noctalia.nix
     ./kitty.nix
     ./kdeconnect.nix

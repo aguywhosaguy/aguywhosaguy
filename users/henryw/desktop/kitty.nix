@@ -6,8 +6,8 @@
     settings = {
       allow_remote_control = "yes";
       
-      background_opacity = "0.6";
-      background_blur = 1;
+      background_opacity = "0.5";
+      # background_blur = 1;
 
       cursor_trail = 10;
       cursor_trail_start_threshold = 2;
