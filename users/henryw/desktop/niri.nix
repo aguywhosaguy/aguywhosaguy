@@ -2,20 +2,31 @@
 
 {
   imports = [ inputs.niri.homeModules.niri ];
-  
+
   programs.niri = {
+
     enable = true;
 
-    settings = lib.mkForce {
+    package = pkgs.niri-unstable;
+
+    settings = {
       spawn-at-startup = [
         { command = [ "vicinae" "server" ]; }
+        { command = [ "steam" "-silent" ]; }
       ];
+
+      layout = {
+        focus-ring.enable = false;
+        background-color = "transparent";
+      };
 
       input = {
         touchpad = {
           dwt = false;
         };
       };
+
+      prefer-no-csd = true;
 
       outputs."eDP-1" = {
         mode = {
@@ -34,14 +45,27 @@
 
       window-rules = [
         {
-          matches = [ { title = "^Ghostty$"; } ];
-          opacity = 0.75;
+          matches = [ { app-id = "[\s\S]*"; } ];
+          geometry-corner-radius = {
+            top-left = 12.0;
+            top-right = 12.0;
+            bottom-left = 12.0;
+            bottom-right = 12.0;
+          };
+          clip-to-geometry = true;
         }
       ];
 
-      binds = with config.lib.niri.actions; {
+      layer-rules = [  
+        {
+          matches = [ { namespace = "^quickshell$"; } ];
+          place-within-backdrop = true;
+        }
+      ];
+
+      binds = with config.lib.niri.actions; lib.mkForce {
         # ── Your existing binds (unchanged) ──
-        "Mod+T".action.spawn = [ "ghostty" ];
+        "Mod+T".action.spawn = [ "kitty" ];
         "Mod+C".action.spawn = [ "google-chrome" ];
         "Mod+H".action.spawn = [ "helium" "--ozone-platform=wayland" "--enable-features=WaylandWindowDecorations" ];
         "XF86Tools".action.spawn = [ "vicinae" "toggle" ];
@@ -141,7 +165,15 @@
         "XF86MonBrightnessDown" = { allow-when-locked = true; action.spawn = [ "brightnessctl" "--class=backlight" "set" "10%-" ]; };
       };
 
-     
     };
+
   };
+
+  xdg.configFile."niri/config.d/appearance.kdl".text = ''
+    # Apply rounded corners to ALL windows across Niri
+    window-rule {
+        geometry-corner-radius 16
+        clip-to-geometry true
+    }
+  '';
 }

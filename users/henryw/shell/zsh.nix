@@ -8,7 +8,8 @@
     syntaxHighlighting.enable = true;
 
     initExtra = ''
-     export PATH="$HOME/.cargo/bin:$PATH"
+      eval "$(starship init zsh)"
+      export PATH="$HOME/.cargo/bin:$PATH"
     '';
 
     shellAliases = {

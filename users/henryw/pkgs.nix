@@ -16,7 +16,6 @@
 
     # core CLI tools
     eza # ls alternative
-    helix
     openssh
     file
     steam-run
@@ -67,6 +66,8 @@
 
     steam
     heroic
+
+    linux-wallpaperengine
 
     overskride # bluetooth
     

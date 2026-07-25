@@ -7,6 +7,7 @@
     ./dms.nix
     ./flameshot.nix
     ./noctalia.nix
+    ./kitty.nix
     ./kdeconnect.nix
   ];
 

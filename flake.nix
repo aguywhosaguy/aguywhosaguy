@@ -47,6 +47,10 @@
       url = "github:AvengeMedia/DankMaterialShell";
       # inputs.nixpkgs.follows = "niri/nixpkgs";
     };
+    dms-plugin-registry = {
+      url = "github:AvengeMedia/dms-plugin-registry";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = {
     self,
@@ -76,7 +80,11 @@
                 value = import ./users/${u}/home.nix;
               }) users);
             }
-          ];
+            ({ pkgs, ... }: {
+              nixpkgs.overlays = [ niri.overlays.niri ];
+              # programs.niri.package = pkgs.niri-unstable;
+            })
+         ];
         };
   in
   {
@@ -86,8 +94,8 @@
         users = [ "henryw" ];
       };
       deli = mkSystem {
-	hostname = "deli";
-	users = [ "nick" ];
+	      hostname = "deli";
+	      users = [ "nick" ];
       };
     };
   };

@@ -1,0 +1,224 @@
+{ ... }:
+
+{
+  programs.helix = {
+    enable = true;
+
+    settings = {
+      theme = "bgless";
+    };
+
+    themes = {
+      bgless = {
+      	attribute = "lilac";
+      	keyword = "almond";
+      	"keyword.directive" = "lilac";
+      	namespace = "lilac";
+      	punctuation = "lavender";
+      	"punctuation.delimiter" = "lavender";
+      	operator = "lilac";
+      	special = "honey";
+      	"variable.other.member" = "white";
+      	variable = "lavender";
+      	"variable.parameter" = {
+      		fg = "lavender";
+      	};
+      	"variable.builtin" = "mint";
+      	type = "white";
+      	"type.builtin" = "white";
+      	constructor = "lilac";
+      	function = "white";
+      	"function.macro" = "lilac";
+      	"function.builtin" = "white";
+      	tag = "almond";
+      	comment = "sirocco";
+      	constant = "white";
+      	"constant.builtin" = "white";
+      	string = "silver";
+      	"constant.numeric" = "chamois";
+      	"constant.character.escape" = "honey";
+      	label = "honey";
+      	tabstop = {
+      		modifiers = [ "italic" ];
+      		bg = "bossanova";
+      	};
+      	"markup.heading" = "lilac";
+      	"markup.bold" = {
+      		modifiers = [ "bold" ];
+      	};
+      	"markup.italic" = {
+      		modifiers = [ "italic" ];
+      	};
+      	"markup.strikethrough" = {
+      		modifiers = [ "crossed_out" ];
+      	};
+      	"markup.link.url" = {
+      		fg = "silver";
+      		modifiers = [ "underlined" ];
+      	};
+      	"markup.link.text" = "almond";
+      	"markup.raw" = "almond";
+      	"diff.plus" = "#35bf86";
+      	"diff.minus" = "#f22c86";
+      	"diff.delta" = "#6f44f0";
+      	"ui.background" = {
+      		bg = "";
+      	};
+      	"ui.background.separator" = {
+      		fg = "comet";
+      	};
+      	"ui.linenr" = {
+      		fg = "comet";
+      	};
+      	"ui.linenr.selected" = {
+      		fg = "lilac";
+      	};
+      	"ui.statusline" = {
+      		fg = "lilac";
+      		bg = "revolver";
+      	};
+      	"ui.statusline.inactive" = {
+      		fg = "lavender";
+      		bg = "revolver";
+      	};
+      	"ui.popup" = {
+      		bg = "revolver";
+      	};
+      	"ui.window" = {
+      		fg = "bossanova";
+      	};
+      	"ui.help" = {
+      		bg = "#7958DC";
+      		fg = "#171452";
+      	};
+      	"ui.text" = {
+      		fg = "lavender";
+      	};
+      	"ui.text.focus" = {
+      		fg = "white";
+      	};
+      	"ui.text.inactive" = "sirocco";
+      	"ui.text.directory" = {
+      		fg = "lilac";
+      	};
+      	"ui.virtual" = {
+      		fg = "comet";
+      	};
+      	"ui.virtual.ruler" = {
+      		bg = "bossanova";
+      	};
+      	"ui.virtual.jump-label" = {
+      		fg = "apricot";
+      		modifiers = [ "bold" ];
+      	};
+      	"ui.virtual.indent-guide" = {
+      		fg = "comet";
+      	};
+      	"ui.selection" = {
+      		bg = "#540099";
+      	};
+      	"ui.selection.primary" = {
+      		bg = "#540099";
+      	};
+      	"ui.cursor.select" = {
+      		bg = "delta";
+      	};
+      	"ui.cursor.insert" = {
+      		bg = "white";
+      	};
+      	"ui.cursor.primary.select" = {
+      		bg = "delta";
+      	};
+      	"ui.cursor.primary.insert" = {
+      		bg = "white";
+      	};
+      	"ui.cursor.match" = {
+      		fg = "#212121";
+      		bg = "#6C6999";
+      	};
+      	"ui.cursor" = {
+      		modifiers = [ "reversed" ];
+      	};
+      	"ui.cursorline.primary" = {
+      		bg = "bossanova";
+      	};
+      	"ui.highlight" = {
+      		bg = "bossanova";
+      	};
+      	"ui.highlight.frameline" = {
+      		bg = "#634450";
+      	};
+      	"ui.debug" = {
+      		fg = "#634450";
+      	};
+      	"ui.debug.breakpoint" = {
+      		fg = "apricot";
+      	};
+      	"ui.menu" = {
+      		fg = "lavender";
+      		bg = "revolver";
+      	};
+      	"ui.menu.selected" = {
+      		fg = "revolver";
+      		bg = "white";
+      	};
+      	"ui.menu.scroll" = {
+      		fg = "lavender";
+      		bg = "comet";
+      	};
+      	"diagnostic.hint" = {
+      		underline = {
+      			color = "silver";
+      			style = "curl";
+      		};
+      	};
+      	"diagnostic.info" = {
+      		underline = {
+      			color = "delta";
+      			style = "curl";
+      		};
+      	};
+      	"diagnostic.warning" = {
+      		underline = {
+      			color = "lightning";
+      			style = "curl";
+      		};
+      	};
+      	"diagnostic.error" = {
+      		underline = {
+      			color = "apricot";
+      			style = "curl";
+      		};
+      	};
+      	"diagnostic.unnecessary" = {
+      		modifiers = [ "dim" ];
+      	};
+      	"diagnostic.deprecated" = {
+      		modifiers = [ "crossed_out" ];
+      	};
+      	warning = "lightning";
+      	error = "apricot";
+      	info = "delta";
+      	hint = "silver";
+      	palette = {
+      		white = "#ffffff";
+      		lilac = "#dbbfef";
+      		lavender = "#a4a0e8";
+      		comet = "#5a5977";
+      		bossanova = "#452859";
+      		midnight = "#3b224c";
+      		revolver = "#281733";
+      		silver = "#cccccc";
+      		sirocco = "#697C81";
+      		mint = "#9ff28f";
+      		almond = "#eccdba";
+      		chamois = "#E8DCA0";
+      		honey = "#efba5d";
+      		apricot = "#f47868";
+      		lightning = "#ffcd1c";
+      		delta = "#6F44F0";
+      	};
+      };
+    };
+  };
+}
