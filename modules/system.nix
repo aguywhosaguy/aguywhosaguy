@@ -6,7 +6,7 @@
 
   networking.networkmanager.enable = true;
 
-  time.timeZone = "America/Chicago";
+  time.timeZone = "America/New_York";
 
   i18n.defaultLocale = "en_US.UTF-8";
 

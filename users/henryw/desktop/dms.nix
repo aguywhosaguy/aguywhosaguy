@@ -22,6 +22,7 @@
     enableAudioWavelength = true;      # Audio visualizer (cava)
     enableCalendarEvents = true;       # Calendar integration (khal)
 
+
     settings = {
       blurEnabled = true;
 
@@ -29,6 +30,8 @@
       currentThemeCategory = "dynamic";
 
       showLauncherButton = false;
+
+      useAutoLocation = true;
 
       barConfigs = [
         {
